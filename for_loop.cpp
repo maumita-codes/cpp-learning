@@ -10,6 +10,5 @@ int main(){
     //reverse 
     for(int i=10; i>=1; i--){
         cout<<i<<endl;
-    }
-    
+    }  
 }
