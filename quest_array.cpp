@@ -31,5 +31,28 @@ int main(){
         cout<<"odd numbers:"<<ct<<endl;
 
     }
+
+    int number[5];
+    for(int p=0;p<5;p++){
+        cout<<"Enter your numbers: "<<endl;
+        cin>>number[p];
+    }
+//it checks whether the no. user wants to check is present in the user provided array or not
+
+    int search;
+    cout<<"enter the number you want to search: "<<endl;
+    cin>>search;
+    bool found=false;
+    for(int p=0; p<5;p++){
+        if(number[p]==search){
+            found=true;
+        }
+    }
+    if(found){
+        cout<<"found"<<endl;
+    }      
+    else{
+        cout<<"not found"<<endl;
+    }
     return 0;
 }
