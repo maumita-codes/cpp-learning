@@ -67,6 +67,22 @@ int main(){
         cout<<n[a]<<endl;
     }
       
- 
+ // to provide the number of occurances of numbers in the array provided by the user
+    int cn=0;
+    int numb[5];
+    for(int b=0;b<5;b++){
+        cout<<"Enter your numbers: "<<endl;
+        cin>>numb[b];
+    }
+    int sear;
+    cout<<"Which number do you want to count? ";
+    cin>>sear;
+    for(int b=0;b<5;b++){
+        if(numb[b]==sear){
+            cn++;
+        }
+    }
+    cout << search << " appears " << cn << " times." << endl;
+
     return 0;
 }
