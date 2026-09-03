@@ -12,7 +12,8 @@ int main(){
     for(int m=0;m<4;m++){
         sum=sum+no[m];
     }
-    double average= (double)sum/4; //to give avg of given numbers by the user.
+    double average= (double)sum/4;
+ //to give avg of given numbers by the user.
     cout<<"the average of the provided numbers is "<<average<<endl;
 
     int count=0;
@@ -54,5 +55,18 @@ int main(){
     else{
         cout<<"not found"<<endl;
     }
+
+// to give the reverse order in the output of the array user provides
+    int n[5];
+    for(int a=0;a<5;a++){
+        cout<<"Enter your numbers: "<<endl;
+        cin>>n[a];
+    }
+    cout<<"the reverse order is:"<<endl;
+    for(int a=4;a>=0;a--){
+        cout<<n[a]<<endl;
+    }
+      
+ 
     return 0;
 }
