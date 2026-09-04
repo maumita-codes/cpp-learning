@@ -67,7 +67,7 @@ int main(){
         cout<<n[a]<<endl;
     }
       
- // to provide the number of occurances of numbers in the array provided by the user
+ //to provide the number of occurances of numbers in the array provided by the user
     int cn=0;
     int numb[5];
     for(int b=0;b<5;b++){
@@ -82,7 +82,33 @@ int main(){
             cn++;
         }
     }
-    cout << search << " appears " << cn << " times." << endl;
+    cout<<sear<<" appears " << cn << " times." << endl;
 
+// to find the second largest number in an array
+    int arr[5];
+    for(int k=0;k<5;k++){
+        cout<<"Enter your numbers: "<<endl;
+        cin>>arr[k];
+    }
+    int maxm=arr[0];
+    for(int k=0;k<5;k++){
+        if(arr[k]>maxm){
+            maxm=arr[k];
+        }
+    }
+    cout<<"the largest number is "<<maxm<<endl;
+    int second = arr[1];
+    for(int k = 2; k < 5; k++){
+        if(arr[k]<maxm){
+            second=maxm;
+            maxm=arr[k];
+        }
+        else if(arr[k]<maxm && arr[k]>second){
+            second=arr[k];
+        }
+    }
+    cout<<"the second largest number is "<<second<<endl;
+
+    
     return 0;
 }
