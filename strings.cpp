@@ -69,6 +69,19 @@ int main(){
     }
     cout<<"The number of words int the sentence is: "<<counter+1<<endl;
 
-    
+    //to position of the letter where it occurs first
+    int calc;
+    string liner;
+    cout<<"Enter your sentence: "<<endl;
+    getline(cin,liner);
+    char search;
+    cout<<"Enter your character: "<<endl;
+    cin>>search;
+    for(int h=0;h<liner.length();h++){
+        if(liner[h]==search){
+            cout<<"the first occurance is in: "<<liner[h]+1<<endl;
+            break;
+        }
+    }
     return 0;
 }
