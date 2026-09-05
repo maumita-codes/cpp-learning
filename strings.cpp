@@ -45,6 +45,16 @@ int main(){
     }
     cout<<"The number of vowels in a sentence is:"<<cnt<<endl;
 
-    
+    //to count the number of spaces between words
+    int ct=0;
+    string ln;
+    cout<<"Enter your sentence: "<<endl;
+    getline(cin,ln);
+    for(int l=0;l<ln.length();l++){
+        if(ln[l]==' '){
+            ct=ct+1;
+        }   
+    }
+    cout<<"The number of spaces in the snetence is:"<<ct<<endl;
     return 0;
 }
