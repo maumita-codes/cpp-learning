@@ -56,5 +56,19 @@ int main(){
         }   
     }
     cout<<"The number of spaces in the snetence is:"<<ct<<endl;
+
+    //counting number of words in a sentence
+    int counter=0;
+    string sen;
+    cout<<"Enter your sentence: "<<endl;
+    getline(cin,sen);
+    for(int j=0;j<sen.length();j++){
+        if(sen[j]==' '){
+            counter++;
+        }
+    }
+    cout<<"The number of words int the sentence is: "<<counter+1<<endl;
+
+    
     return 0;
 }
