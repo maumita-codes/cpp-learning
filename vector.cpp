@@ -7,5 +7,13 @@ int main(){
     for(int i=0;i<numbers.size();i++){
         cout<<numbers[i]<<endl;
     }
+
+//adding an element in the vector
+    vector<int> numb={3,6,9,12,15};
+    numb.push_back(18);
+    for(int m=0;m<numb.size();m++){
+        cout<<numb[m]<<endl;
+    }
+
     return 0;
 }
