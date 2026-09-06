@@ -15,5 +15,11 @@ int main(){
         cout<<numb[m]<<endl;
     }
 
+//to remove the last element from the vector
+    vector<int> num={3,6,9,12,15,18,21};
+    num.pop_back();
+    for(int j=0;j<num.size();j++){
+        cout<<num[j]<<endl;
+    }
     return 0;
 }
