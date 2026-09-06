@@ -1,5 +1,7 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
+
 using namespace std;
 int main(){
 //printing a vector in separate lines
@@ -44,6 +46,17 @@ int main(){
     }
     for (int h=0;h<nums.size();h++){
     cout<<nums[h]<<endl;
+    }
+
+//to sort a vector
+    vector<int>no(5);
+    for (int r=0;r<no.size();r++){
+        cout<<"enter the elements: "<<endl;
+        cin>>no[r];
+    }
+    sort(no.begin(), no.end());
+    for (int r=0;r<no.size();r++){
+    cout<<no[r]<<endl;
     }
     return 0;
 }
