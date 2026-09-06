@@ -35,5 +35,15 @@ int main(){
     vector<int> vec={10,20,30,40,50};
     cout<<vec.front()<<endl;
     cout<<vec.back()<<endl;
+
+//to print a vector from the user
+    vector<int>nums(5);
+    for (int h=0;h<5;h++){
+        cout<<"enter the elements: "<<endl;
+        cin>>nums[h];
+    }
+    for (int h=0;h<nums.size();h++){
+    cout<<nums[h]<<endl;
+    }
     return 0;
 }
