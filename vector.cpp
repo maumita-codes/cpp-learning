@@ -21,5 +21,14 @@ int main(){
     for(int j=0;j<num.size();j++){
         cout<<num[j]<<endl;
     }
+
+//to check if a vector is empty
+    vector<int> number={4,8,12,16,20};
+    if(number.empty()){
+        cout<<"the vector is empty."<<endl;
+    }
+    else{
+        cout<<"the vector is not empty."<<endl;
+    }
     return 0;
 }
