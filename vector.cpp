@@ -30,5 +30,10 @@ int main(){
     else{
         cout<<"the vector is not empty."<<endl;
     }
+
+//to find the first and last elements in the vector
+    vector<int> vec={10,20,30,40,50};
+    cout<<vec.front()<<endl;
+    cout<<vec.back()<<endl;
     return 0;
 }
