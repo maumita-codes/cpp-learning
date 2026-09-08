@@ -30,6 +30,17 @@ int main(){
     else{
         cout<<"The number is positive."<<endl;
     }
-    return 0;
 
+//nested if 
+    int age;
+    cout<<"Enter your age: "<<endl;
+    cin>>age;
+    if(age>=18){
+        if(age>=65){
+            cout<<"You are senior citizen."<<endl;
+        }
+        cout<<"you are eligible for registration."<<endl;
+        
+    }
+    return 0;
 }
