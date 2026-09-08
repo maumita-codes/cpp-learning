@@ -1,6 +1,9 @@
+// using logical operators
 #include <iostream>
 using namespace std;
 int main(){
+//whether number is positve or negative
+//using &&
     int number1, number2;
     cout<<"Enter the numbers: "<<endl;
     cin>>number1>>number2;
@@ -15,6 +18,17 @@ int main(){
     }
     else{
         cout<<"both numbers are negative."<<endl;
+    }
+
+//checking number is positive or not using !
+    int number;
+    cout<<"Enter your number: "<<endl;
+    cin>>number;
+    if(!(number>0)){
+        cout<<"The number is not positive."<<endl;
+    }
+    else{
+        cout<<"The number is positive."<<endl;
     }
     return 0;
 
