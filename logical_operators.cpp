@@ -42,5 +42,22 @@ int main(){
         cout<<"you are eligible for registration."<<endl;
         
     }
+
+//nested if with else
+    int ages;
+    cout<<"Enter your age: "<<endl;
+    cin>>ages;
+    if(ages>=18){
+        if(ages>=65){
+            cout<<"You are a senior citizen."<<endl;
+        }
+        else{
+            cout<<"You are an adult."<<endl;
+        }
+        cout<<"You are eligible."<<endl;
+    }
+    else{
+        cout<<"You are a minor."<<endl;
+    }
     return 0;
 }
