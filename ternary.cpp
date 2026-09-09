@@ -16,5 +16,15 @@ int main(){
     cin>>number;
     number%2==0 ? cout<<"The number is even." : cout<<"The number is odd.";
 
+//to check which number is bigger than the other
+    int number1;
+    int number2;
+    cout<<"Enter the first number: "<<endl;
+    cin>>number1;
+    cout<<"Enter the second number: "<<endl;
+    cin>>number2;
+    
+    number1>number2 ? cout<<"The first number is bigger.": (number2>number1 ? cout<<"The second number is bigger." : cout<<"The numbers are equal.");
+
     return 0;
 }
