@@ -1,33 +1,70 @@
 # C++ Learning
 
-A collection of my C++ practice programs while building a strong foundation in programming, problem-solving, and data structures.
+A collection of my C++ practice programs while building a strong foundation in programming, problem-solving, and eventually Data Structures & Algorithms.
 
 ## 📚 Topics Covered
 
+### C++ Fundamentals
+
+* Basic C++ Syntax
 * Input & Output
 * Variables & Data Types
-* Operators
+* Arithmetic Operators
+* Comparison Operators
+* Logical Operators: `&&`, `||`, `!`
 * Conditional Statements
+* `if`, `else if`, `else`
+* Nested `if` Statements
+* Ternary Operator
+* Nested Ternary Operator
+* Boolean Variables
+
+### Loops
+
 * `for` Loops
 * `while` Loops
 * `do-while` Loops
 * `break` & `continue`
+* Multiplication Tables
+* Basic Loop-Based Problem Solving
+
+### Functions
+
 * Functions
-* Function Parameters & Return Values
+* Function Parameters
+* Return Values
 * Function Overloading
-* Arrays
-* Array Traversal & Searching
+* Choosing Between Overloaded Functions
+
+### Arrays
+
+* Array Declaration & Initialization
+* Array Input & Output
+* Array Traversal
+* Searching an Array
 * Finding Maximum & Minimum
 * Sum & Average of Array Elements
 * Counting Even & Odd Elements
+* Counting Occurrences
+* Reversing an Array
 * Finding the Second Largest Element
-* Strings
-* String Indexing & Length
+
+### Strings
+
+* String Input & Output
+* String Indexing
+* String Length
 * `getline()`
-* Character & Vowel Counting
-* Counting Words & Spaces
+* Character Counting
+* Vowel Counting
+* Counting Spaces
+* Counting Words
 * Finding the First Occurrence of a Character
-* Vectors
+
+### Vectors
+
+* Vector Declaration & Initialization
+* Vector Input & Output
 * Vector Indexing
 * `size()`
 * `push_back()`
@@ -35,17 +72,22 @@ A collection of my C++ practice programs while building a strong foundation in p
 * `empty()`
 * `front()` & `back()`
 * User Input with Vectors
-* `sort()`
+* Sorting Vectors using `sort()`
 
 ## 💻 Practice Programs
 
 * Hello World
 * About Me
 * Calculator
+* Positive / Negative / Zero Checker
+* Even / Odd Checker
 * Prime Number Checker
 * Conditional Statement Practice
-* While Loop Practice
-* Do-While Loop Practice
+* Logical Operator Practice
+* `for` Loop Practice
+* `while` Loop Practice
+* `do-while` Loop Practice
+* `break` & `continue` Practice
 * Multiplication Table
 * Function Practice
 * Function Overloading
@@ -70,24 +112,34 @@ A collection of my C++ practice programs while building a strong foundation in p
 
 ## 🎯 Goal
 
-To build a strong foundation in C++ and develop strong programming and problem-solving skills before moving on to OOP, STL, and Data Structures & Algorithms.
+To build a strong foundation in C++ and develop strong programming and problem-solving skills before moving on to Object-Oriented Programming, advanced STL concepts, and Data Structures & Algorithms.
 
 ## 🚧 Currently Learning
 
-C++ fundamentals and STL basics, with a focus on understanding programming logic, writing clean code, solving problems, and practicing consistently.
+Strengthening my C++ fundamentals and problem-solving skills through practice.
+
+Current focus:
+
+* Writing cleaner and more organized code
+* Improving logical thinking
+* Solving problems independently
+* Debugging my own code
+* Building consistency with C++
 
 ## 🛣️ Learning Path
 
 ```text
 C++ Fundamentals
       ↓
-Functions & Arrays
+Functions
       ↓
-Strings & Vectors
+Arrays
       ↓
-OOP
+Strings
       ↓
-STL
+Vectors & STL
+      ↓
+Object-Oriented Programming
       ↓
 Data Structures & Algorithms
       ↓
@@ -96,4 +148,4 @@ LeetCode & Problem Solving
 
 ---
 
-*This repository documents my progress as I learn C++ and improve my problem-solving skills.*
+*This repository documents my progress as I learn C++ from scratch and improve my programming and problem-solving skills.*
