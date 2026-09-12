@@ -1,15 +1,19 @@
+//pointers
+
 #include <iostream>
 using namespace std;
 int main(){
-    // int y;
-    // cout<<"Enter the number: "<<endl;
-    // cin>>y;
-    // int *ptr=&y;
-    // int z;
-    // cout<<"enter another value: "<<endl;
-    // cin>>z;
-    // *ptr=z;
-    // cout<<"the current data is: "<<*ptr<<endl;
+    int y;
+    cout<<"Enter the number: "<<endl;
+    cin>>y;
+    int *ptr=&y;
+    int z;
+    cout<<"enter another value: "<<endl;
+    cin>>z;
+    *ptr=z;;
+    cout<<"the current data is: "<<*ptr<<endl;
+
+//address of x
 
     int x;
     cout<<"Enter your number: "<<endl;
@@ -23,5 +27,17 @@ int main(){
     cin>>h;
     *ptr=h;
     cout<<"the current data is: "<<*ptr<<endl;
+
+//changing the value of the pointer
+
+    int a;
+    cout<<"Enter your number: "<<endl;
+    cin>>a;
+    int *ptr=&a;
+    cout<<"value of a: "<<a<<endl;
+    cout<<"Address of a: "<<&a<<endl;
+    cout<<"Address stored in ptr: "<<ptr<<endl;
+    *ptr= a +10;
+    cout<<"The changed value of a is: " <<*ptr<<endl;
     return 0;
 }
