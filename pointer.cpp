@@ -63,5 +63,14 @@ int main(){
     *ptr=v*2;
     cout<<"The changed value of v is: "<<*ptr<<endl;
     
+//pointer arithmatic
+    int arr[5]={10,20,30,40,50};
+    int *ptr=arr;
+    cout<<*ptr<<endl;
+    cout<<*(ptr+1)<<endl;
+    cout<<*(ptr+2)<<endl;
+    cout<<*ptr+5<<endl;
+    cout<<*(ptr+4)+10<<endl;
+
     return 0;
 }
