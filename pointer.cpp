@@ -72,5 +72,17 @@ int main(){
     cout<<*ptr+5<<endl;
     cout<<*(ptr+4)+10<<endl;
 
+//changing pointer values
+    int x=5;
+    int y=15;
+    int *ptr1=&x;
+    int *ptr2=&y;
+    cout<<*ptr1<<endl;
+    cout<<*ptr2<<endl;
+    *ptr1=25;
+    *ptr2=35;
+    cout<<x<<endl;
+    cout<<y<<endl;
+    
     return 0;
 }
