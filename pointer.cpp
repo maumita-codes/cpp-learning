@@ -83,6 +83,22 @@ int main(){
     *ptr2=35;
     cout<<x<<endl;
     cout<<y<<endl;
-    
+
+//pointer swapping
+    int a = 10;
+    int b = 20;
+
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    cout<<a<<endl;
+    cout<<b<<endl;
+
+    int temp;
+    temp=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=temp;
+    cout<<a<<endl;
+    cout<<b<<endl;
+
     return 0;
 }
