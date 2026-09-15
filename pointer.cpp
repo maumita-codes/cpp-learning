@@ -106,7 +106,17 @@ int main(){
     int sum= *ptr + *(ptr + 1) + *(ptr + 2) + *(ptr + 3) + *(ptr + 4);
     cout<<sum<<endl;
 
+//finding the largest element in an array
+    int arr[5] = {15, 42, 7, 89, 31};
+    int *ptr = arr;
+    int largest = *ptr;
 
+    for(int i = 1; i < 5; i++) {
+        if(*(ptr + i) > largest) {
+            largest = *(ptr + i);
+        }
+    }
+    cout<<largest<<endl;
     
     return 0;
 }
