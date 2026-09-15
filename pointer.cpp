@@ -100,5 +100,13 @@ int main(){
     cout<<a<<endl;
     cout<<b<<endl;
 
+//sum of all elements in an array
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr;
+    int sum= *ptr + *(ptr + 1) + *(ptr + 2) + *(ptr + 3) + *(ptr + 4);
+    cout<<sum<<endl;
+
+
+    
     return 0;
 }
