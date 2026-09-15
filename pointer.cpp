@@ -118,5 +118,17 @@ int main(){
     }
     cout<<largest<<endl;
     
+//counting even numbers
+    int arr[6] = {12, 7, 18, 25, 30, 41};
+    int *ptr = arr;
+    int even=0;
+    for(int m=0;m<6;m++){
+        if(*(ptr + m) % 2 == 0){
+            even++;
+        }
+    }
+    cout<<even<<endl;
+
+
     return 0;
 }
