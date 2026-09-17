@@ -30,6 +30,10 @@ public:
         cout<<title<<endl;
         cout<<price<<endl;
     }
+    void discount(){
+        price= price-100;
+        cout<<price<<endl;
+    }
 };
 int main(){
 
@@ -42,6 +46,8 @@ int main(){
     Books book2("Atomic Habits", 600);
     book1.display();
     book2.display();
+    book1.discount();
+    book2.discount();
 
     return 0;
 }
