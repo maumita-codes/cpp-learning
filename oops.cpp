@@ -18,9 +18,14 @@ public:
     }
 };
 class Books{
+private:
+    int price;
+
 public:
     string title;
-    int price;
+    void setPrice(int p){
+        price=p;
+    }
 
     Books(string title, int price) {
         this->title=title;
@@ -47,6 +52,7 @@ int main(){
     Books book1("Harry Potter", 500);
     Books book2("Atomic Habits", 600);
     Books book3;
+    book1.setPrice(700);
     book1.display();
     book2.display();
     book3.display();
