@@ -21,12 +21,12 @@ class Books{
 private:
     int price;
 
+
 public:
     string title;
-    void setPrice(int p){
-        price=p;
+    int getPrice(){
+        return price;
     }
-
     Books(string title, int price) {
         this->title=title;
         this->price=price;
@@ -41,6 +41,9 @@ public:
         price= price-100;
         cout<<price<<endl;
     }
+    void setPrice(int p){
+        price=p;
+    }
 };
 int main(){
 
@@ -53,12 +56,12 @@ int main(){
     Books book2("Atomic Habits", 600);
     Books book3;
     book1.setPrice(700);
+    cout << book1.getPrice() << endl;
     book1.display();
     book2.display();
     book3.display();
     book1.discount();
     book2.discount();
-
-
+    
     return 0;
 }
