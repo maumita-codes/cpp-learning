@@ -22,7 +22,9 @@ public:
     string title;
     int price;
 
-    Books(string i, int m):title(i),price(m){
+    Books(string title, int price) {
+        this->title=title;
+        this->price=price;
     }
     Books() : title("Unknown"), price(0) {
     }
