@@ -58,7 +58,38 @@ public:
         cout<<x<<endl;
     }
 };
-
+class animal{
+public:
+    void eat(){
+        cout<<"eating"<<endl;
+    }
+};
+class dog: public animal{
+public:
+    void bark(){
+        cout<<"barking"<<endl;
+    }
+};
+class person{
+protected:
+    string name;
+public:
+    void setName(string n){
+        name=n;
+    }
+    void introduce(){
+        cout<<"My name is "<<name<<endl;
+    }
+};
+class student: public person{
+public:
+    void showName(){
+        cout<<name<<endl;
+    }
+    void study(){
+        cout<<"Studying"<<endl;
+    }
+};
 int main(){
 
     Car car1("Audi", 16000000);
@@ -80,6 +111,16 @@ int main(){
     child c;
     c.setX();
     c.showX();
+
+    dog d;
+    d.eat();
+    d.bark();
+
+    student s;
+    s.setName("Maumita");
+    s.introduce();
+    s.showName();
+    s.study();
     
     return 0;
 }
