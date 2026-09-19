@@ -45,6 +45,20 @@ public:
         price=p;
     }
 };
+class parent{
+protected:
+    int x;
+};
+class child: public parent{
+public:
+    void setX(){
+        x=10;
+    }
+    void showX(){
+        cout<<x<<endl;
+    }
+};
+
 int main(){
 
     Car car1("Audi", 16000000);
@@ -62,6 +76,10 @@ int main(){
     book3.display();
     book1.discount();
     book2.discount();
+
+    child c;
+    c.setX();
+    c.showX();
     
     return 0;
 }
