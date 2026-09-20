@@ -64,13 +64,13 @@ public:
         cout<<"eating"<<endl;
     }
 };
-class dog: public animal{
+class dog: virtual public animal{
 public:
     void bark(){
         cout<<"barking"<<endl;
     }
 };
-class cat: public animal{
+class cat: virtual public animal{
 public:
     void meow(){
         cout<<"Meowing"<<endl;
@@ -161,6 +161,12 @@ int main(){
     s2.study();
     s2.play();
     s2.attendclass();
+    
+    pet p;
+    p.eat();
+    p.bark();
+    p.meow();
+    p.play();
     
     return 0;
 }
