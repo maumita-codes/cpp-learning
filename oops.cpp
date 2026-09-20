@@ -90,6 +90,24 @@ public:
         cout<<"Studying"<<endl;
     }
 };
+class academics{
+public:
+    void study(){
+        cout<<"Studying"<<endl;
+    }
+};
+class sports{
+public: 
+    void play(){
+        cout<<"Playing sports"<<endl;
+    }
+};
+class student2: public academics, public sports{
+public: 
+    void attendclass(){
+        cout<<"attending classes"<<endl;
+    }
+};
 int main(){
 
     Car car1("Audi", 16000000);
@@ -121,6 +139,11 @@ int main(){
     s.introduce();
     s.showName();
     s.study();
+
+    student2 s2;
+    s2.study();
+    s2.play();
+    s2.attendclass();
     
     return 0;
 }
