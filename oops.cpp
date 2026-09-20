@@ -76,6 +76,12 @@ public:
         cout<<"Meowing"<<endl;
     }
 };
+class pet: public dog ,public cat{
+public:
+    void play(){
+        cout<<"Playing"<<endl;
+    }
+};
 class person{
 protected:
     string name;
@@ -143,7 +149,7 @@ int main(){
     cat cat1;
     cat1.eat();
     cat1.meow();
-    
+
 
     student s;
     s.setName("Maumita");
