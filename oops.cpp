@@ -122,14 +122,18 @@ public:
 };
 class AnimaL{
 public:
-    virtual void sound(){
-        cout<<"Animal makes a sound"<<endl;
-    }
+    virtual void sound()=0;
 };
 class DOG: public AnimaL{
 public:
     void sound(){
         cout<<"Dog barks"<<endl;
+    }
+};
+class CAT: public AnimaL{
+public:
+    void sound(){
+        cout<<"cat meows"<<endl;
     }
 };
 int main(){
@@ -183,5 +187,11 @@ int main(){
     AnimaL* ptr = new DOG();
     ptr->sound();
     
+    AnimaL*ptr2=new CAT();
+    ptr2->sound();
+
+    delete ptr;
+    delete ptr2;
+
     return 0;
 }
