@@ -120,6 +120,18 @@ public:
         cout<<"attending classes"<<endl;
     }
 };
+class AnimaL{
+public:
+    virtual void sound(){
+        cout<<"Animal makes a sound"<<endl;
+    }
+};
+class DOG: public AnimaL{
+public:
+    void sound(){
+        cout<<"Dog barks"<<endl;
+    }
+};
 int main(){
 
     Car car1("Audi", 16000000);
@@ -167,6 +179,9 @@ int main(){
     p.bark();
     p.meow();
     p.play();
+
+    AnimaL* ptr = new DOG();
+    ptr->sound();
     
     return 0;
 }
