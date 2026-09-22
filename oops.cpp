@@ -17,6 +17,7 @@ public:
         cout << price << endl;
     }
 };
+
 class Books{
 private:
     int price;
@@ -44,10 +45,12 @@ public:
         price=p;
     }
 };
+
 class parent{
 protected:
     int x;
 };
+
 class child: public parent{
 public:
     void setX(){
@@ -57,6 +60,7 @@ public:
         cout<<x<<endl;
     }
 };
+
 class animal{
 public:
     void eat(){
@@ -81,6 +85,7 @@ public:
         cout<<"Playing"<<endl;
     }
 };
+
 class person{
 protected:
     string name;
@@ -92,6 +97,7 @@ public:
         cout<<"My name is "<<name<<endl;
     }
 };
+
 class student: public person{
 public:
     void showName(){
@@ -101,24 +107,28 @@ public:
         cout<<"Studying"<<endl;
     }
 };
+
 class academics{
 public:
     void study(){
         cout<<"Studying"<<endl;
     }
 };
+
 class sports{
 public: 
     void play(){
         cout<<"Playing sports"<<endl;
     }
 };
+
 class student2: public academics, public sports{
 public: 
     void attendclass(){
         cout<<"attending classes"<<endl;
     }
 };
+
 class AnimaL{
 public:
     virtual void sound()=0;
@@ -135,6 +145,7 @@ public:
         cout<<"cat meows"<<endl;
     }
 };
+
 class Box{
 private:
     int length;
@@ -150,6 +161,18 @@ void showLength(Box b) {
     cout << b.length << endl;
     cout << b.width <<endl;
 }
+
+class Student {
+public:
+    string name;
+    static int count;
+    Student(string n){
+        name=n;
+        count++;
+    } 
+};
+int Student::count=0;
+
 int main(){
 
     Car car1("Audi", 16000000);
@@ -209,5 +232,10 @@ int main(){
 
     Box b(10,6);
     showLength(b);
+
+    Student s1("Amit");
+    Student s2("Aman");
+    Student s3("Aryan");
+    cout<<Student::count<<endl;
     return 0;
 }
