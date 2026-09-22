@@ -21,7 +21,6 @@ class Books{
 private:
     int price;
 
-
 public:
     string title;
     int getPrice(){
@@ -136,6 +135,21 @@ public:
         cout<<"cat meows"<<endl;
     }
 };
+class Box{
+private:
+    int length;
+    int width;
+public: 
+    Box(int l, int w){
+        length=l;
+        width=w;
+    }
+    friend void showLength(Box b);
+};
+void showLength(Box b) {
+    cout << b.length << endl;
+    cout << b.width <<endl;
+}
 int main(){
 
     Car car1("Audi", 16000000);
@@ -193,5 +207,7 @@ int main(){
     delete ptr;
     delete ptr2;
 
+    Box b(10,6);
+    showLength(b);
     return 0;
 }
