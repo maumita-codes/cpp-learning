@@ -176,6 +176,17 @@ public:
 };
 int Student::count=0;
 
+class Number{
+public:
+    int value;
+    Number(int v){
+        value=v;
+    }
+    Number operator+(Number n){
+        return Number(value + n.value);
+    }
+};
+
 int main(){
 
     Car car1("Audi", 16000000);
@@ -240,5 +251,11 @@ int main(){
     Student st2("Aman");
     Student st3("Aryan");
     Student::showCount();
+
+    Number n1(10);
+    Number n2(20);
+    Number n3 = n1 + n2;
+    cout<<n3.value<<endl;
+
     return 0;
 }
