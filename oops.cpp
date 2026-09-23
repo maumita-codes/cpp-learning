@@ -170,6 +170,9 @@ public:
         name=n;
         count++;
     } 
+    static void showCount(){
+        cout<<count<<endl;
+    }
 };
 int Student::count=0;
 
@@ -233,9 +236,9 @@ int main(){
     Box b(10,6);
     showLength(b);
 
-    Student s1("Amit");
-    Student s2("Aman");
-    Student s3("Aryan");
-    cout<<Student::count<<endl;
+    Student st1("Amit");
+    Student st2("Aman");
+    Student st3("Aryan");
+    Student::showCount();
     return 0;
 }
