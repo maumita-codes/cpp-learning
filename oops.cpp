@@ -185,6 +185,9 @@ public:
     Number operator+(Number n){
         return Number(value + n.value);
     }
+    Number(const Number & n){
+        value=n.value;
+    }
 };
 
 int main(){
@@ -256,6 +259,10 @@ int main(){
     Number n2(20);
     Number n3 = n1 + n2;
     cout<<n3.value<<endl;
-
+    Number n4=n1;
+    cout<<n4.value<<endl;
     return 0;
 }
+
+
+
