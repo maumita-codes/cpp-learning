@@ -156,6 +156,13 @@ public:
         width=w;
     }
     friend void showLength(Box b);
+    int* value;
+    Box(int v){
+        value=new int(v);
+    }
+    Box(const Box & b){
+        value=new int(*b.value);
+    }
 };
 void showLength(Box b) {
     cout << b.length << endl;
@@ -261,6 +268,15 @@ int main(){
     cout<<n3.value<<endl;
     Number n4=n1;
     cout<<n4.value<<endl;
+
+    Box b1(10);
+    Box b2=b1;
+
+    *b2.value=20;
+    cout<<*b1.value<<endl;
+    cout<<*b2.value<<endl;
+    delete b1.value;
+    delete b2.value;
     return 0;
 }
 
