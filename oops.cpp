@@ -197,6 +197,16 @@ public:
     }
 };
 
+class Engine{
+public:
+    void start(){
+        cout<<"Engine started"<<endl;
+    }
+};
+class CAR{
+public:
+    Engine engine;
+};
 int main(){
 
     Car car1("Audi", 16000000);
@@ -277,6 +287,10 @@ int main(){
     cout<<*b2.value<<endl;
     delete b1.value;
     delete b2.value;
+
+    CAR car;
+    car.engine.start();
+
     return 0;
 }
 
