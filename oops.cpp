@@ -203,9 +203,26 @@ public:
         cout<<"Engine started"<<endl;
     }
 };
+
 class CAR{
 public:
     Engine engine;
+};
+
+class Student3{
+public:
+    string name;
+    Student3(string n){
+        name=n;
+    }
+};
+
+class University{
+public:
+    Student3* student;
+    University(Student3* s3){
+        student=s3;
+    }
 };
 int main(){
 
@@ -290,6 +307,10 @@ int main(){
 
     CAR car;
     car.engine.start();
+
+    Student3 s3("Maumita");
+    University u(&s3);
+    cout << u.student->name << endl;
 
     return 0;
 }
