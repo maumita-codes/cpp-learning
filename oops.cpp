@@ -224,6 +224,16 @@ public:
         student=s3;
     }
 };
+
+class st{
+public:
+    string name;
+    void showname() const{
+        cout<<name;
+    }
+};
+
+
 int main(){
 
     Car car1("Audi", 16000000);
@@ -311,6 +321,9 @@ int main(){
     Student3 s3("Maumita");
     University u(&s3);
     cout << u.student->name << endl;
+
+    const st q{"Maumita"};
+    q.showname();
 
     return 0;
 }
