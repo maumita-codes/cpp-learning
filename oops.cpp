@@ -132,11 +132,17 @@ public:
 class AnimaL{
 public:
     virtual void sound()=0;
+    virtual ~AnimaL() {
+        cout<<"Animal destructor"<<endl;
+    } 
 };
 class DOG: public AnimaL{
 public:
     void sound(){
         cout<<"Dog barks"<<endl;
+    }
+    ~DOG() {
+        cout << "Dog destructor" << endl;
     }
 };
 class CAT: public AnimaL{
@@ -228,12 +234,23 @@ public:
 class st{
 public:
     string name;
+    st(string n){
+        name=n;
+    }
     void showname() const{
-        cout<<name;
+        cout<<name<<endl;
     }
 };
 
-
+class Test{
+public:
+    Test(){
+        cout<<"Constructor"<<endl;
+    }
+    ~Test(){
+        cout<<"Destructor"<<endl;
+    }
+};
 int main(){
 
     Car car1("Audi", 16000000);
@@ -324,6 +341,8 @@ int main(){
 
     const st q{"Maumita"};
     q.showname();
+
+    Test t;
 
     return 0;
 }
