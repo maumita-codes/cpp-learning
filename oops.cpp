@@ -251,6 +251,20 @@ public:
         cout<<"Destructor"<<endl;
     }
 };
+
+class multi{
+public:
+    int multiply(int a, int b){
+        return a*b;
+    }
+    int multiply(int a, int b, int c){
+        return a*b*c;
+    }
+    double multiply(double a, double b){
+        return a*b;
+    }
+};
+
 int main(){
 
     Car car1("Audi", 16000000);
@@ -343,6 +357,11 @@ int main(){
     q.showname();
 
     Test t;
+
+    multi m;
+    cout<<m.multiply(2,3)<<endl;
+    cout<<m.multiply(2,3,4)<<endl;
+    cout<<m.multiply(2.5,4.8)<<endl;
 
     return 0;
 }
