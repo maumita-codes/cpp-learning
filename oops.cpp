@@ -265,6 +265,23 @@ public:
     }
 };
 
+class vehicle {
+public:
+    virtual void start() {
+        cout << "The vehicle is starting." << endl;
+    }
+
+    virtual ~vehicle() {
+    }
+};
+
+class Car2 : public vehicle {
+public:
+    void start() {
+        cout << "The Car is starting" << endl;
+    }
+};
+
 int main(){
 
     Car car1("Audi", 16000000);
@@ -363,6 +380,10 @@ int main(){
     cout<<m.multiply(2,3,4)<<endl;
     cout<<m.multiply(2.5,4.8)<<endl;
 
+    vehicle* ptr3 = new Car2();
+    ptr3->start();
+    delete ptr3;
+    
     return 0;
 }
 
