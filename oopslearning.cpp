@@ -19,10 +19,22 @@ public:
         cout<<"Developer is writing code."<<endl;
     }
 };
+
+class Box{
+public:
+    int* value;
+    Box(int v){
+        value=new int(v);
+    }
+};
 int main(){
     Employee* ptr= new Developer("Maumita");
     ptr->work();
     delete ptr;
-
-
+  
+    Box b1(10);
+    Box b2(20);
+    b2=b1;
+    cout << *b1.value << endl;
+    return 0;
 }
