@@ -26,7 +26,14 @@ public:
     Box(int v){
         value=new int(v);
     }
+    Box& operator=(const Box& b){
+    delete value;
+    value= new int(*b.value);
+    return *this;
+    }
 };
+
+
 int main(){
     Employee* ptr= new Developer("Maumita");
     ptr->work();
@@ -36,5 +43,6 @@ int main(){
     Box b2(20);
     b2=b1;
     cout << *b1.value << endl;
+    cout << *b2.value <<endl;
     return 0;
 }
