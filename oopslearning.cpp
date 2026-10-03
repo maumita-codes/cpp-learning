@@ -27,9 +27,11 @@ public:
         value=new int(v);
     }
     Box& operator=(const Box& b){
-    delete value;
-    value= new int(*b.value);
-    return *this;
+        if(this != &b){
+            delete value;
+            value=new int(*b.value);
+        }
+        return *this;
     }
 };
 
