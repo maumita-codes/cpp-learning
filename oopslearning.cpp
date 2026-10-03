@@ -9,6 +9,7 @@ public:
     virtual void work(){
         cout<<"The employee is working."<<endl;
     }
+    virtual ~Employee(){}
 };
 class Developer: public Employee{
 public:
@@ -32,6 +33,9 @@ public:
             value=new int(*b.value);
         }
         return *this;
+    }
+    ~Box(){
+        delete value;
     }
 };
 
