@@ -1,4 +1,5 @@
 #include <iostream>
+#include <utility>
 using namespace std;
 class Employee{
 public:
@@ -37,6 +38,18 @@ public:
     ~Box(){
         delete value;
     }
+    Box(Box&& b){
+        value=b.value;
+        b.value=nullptr;
+    }
+    Box& operator=(Box&& b){
+        if(this != &b){
+            delete value;
+            value=b.value;
+            b.value=nullptr;
+        }
+        return *this;
+    }
 };
 
 
@@ -50,5 +63,12 @@ int main(){
     b2=b1;
     cout << *b1.value << endl;
     cout << *b2.value <<endl;
+    Box b3=std::move(b1);
+    cout<<*b3.value<<endl;
+    Box b4(50);
+    cout<< *b4.value <<endl;
+    b4= std::move(b3);
+    cout<< *b4.value <<endl;
+
     return 0;
 }
