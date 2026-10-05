@@ -51,6 +51,15 @@ public:
         return *this;
     }
 };
+template <typename T>
+T multiply(T a, T b){
+    return a*b;
+};
+
+template <typename M, typename U>
+auto add(M p, U q){
+    return p+q;
+};
 
 
 int main(){
@@ -69,6 +78,12 @@ int main(){
     cout<< *b4.value <<endl;
     b4= std::move(b3);
     cout<< *b4.value <<endl;
+
+    cout<< multiply(10,20) <<endl;
+    cout<< multiply(2.5,6.7)<<endl;
+
+    cout<<add(10,4.5)<<endl;
+    cout << add(5, 2.75) << endl;
 
     return 0;
 }
