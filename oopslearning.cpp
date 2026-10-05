@@ -61,6 +61,15 @@ auto add(M p, U q){
     return p+q;
 };
 
+template <typename S>
+class Storage{
+public:
+    S value;
+    Storage(S v){
+        value=v;
+    }
+};
+
 
 int main(){
     Employee* ptr= new Developer("Maumita");
@@ -84,6 +93,11 @@ int main(){
 
     cout<<add(10,4.5)<<endl;
     cout << add(5, 2.75) << endl;
+
+    Storage<int> s1(25);
+    Storage<double> s2(12.5);
+    cout<<s1.value<<endl;
+    cout<<s2.value<<endl;
 
     return 0;
 }
