@@ -68,6 +68,9 @@ public:
     Storage(S v){
         value=v;
     }
+    void show(){
+        cout<< value <<endl;
+    }
 };
 
 
@@ -98,6 +101,8 @@ int main(){
     Storage<double> s2(12.5);
     cout<<s1.value<<endl;
     cout<<s2.value<<endl;
+    s1.show();
+    s2.show();
 
     return 0;
 }
