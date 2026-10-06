@@ -51,6 +51,7 @@ public:
         return *this;
     }
 };
+
 template <typename T>
 T multiply(T a, T b){
     return a*b;
@@ -73,6 +74,19 @@ public:
     }
 };
 
+//TEMPLATE SPECIALISATION
+template <>
+class Storage<string>{
+public:
+    string value;
+    Storage(string v){
+        value=v;
+    }
+    void show(){
+        cout<<"Stored string: "<<value<<endl;
+        cout<<"Stored length: "<<value.length()<<endl;
+    }
+};
 
 int main(){
     Employee* ptr= new Developer("Maumita");
@@ -104,5 +118,10 @@ int main(){
     s1.show();
     s2.show();
 
+    Storage<int>s1(25);
+    Storage<string>s2("Hello");
+    s1.show();
+    s2.show();
+    
     return 0;
 }
