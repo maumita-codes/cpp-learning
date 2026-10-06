@@ -1,5 +1,7 @@
 #include <iostream>
 #include <utility>
+#include <vector>
+
 using namespace std;
 class Employee{
 public:
@@ -88,6 +90,9 @@ public:
     }
 };
 
+//STANDARD TEMPLATE LIBRARY
+
+
 int main(){
     Employee* ptr= new Developer("Maumita");
     ptr->work();
@@ -111,17 +116,21 @@ int main(){
     cout<<add(10,4.5)<<endl;
     cout << add(5, 2.75) << endl;
 
-    Storage<int> s1(25);
-    Storage<double> s2(12.5);
-    cout<<s1.value<<endl;
-    cout<<s2.value<<endl;
-    s1.show();
-    s2.show();
-
     Storage<int>s1(25);
     Storage<string>s2("Hello");
     s1.show();
     s2.show();
+
+    vector<int> numbers;
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+    numbers.push_back(40);
+
+    for(int x: numbers){
+        cout<< x << " ";
+    }
+
     
     return 0;
 }
