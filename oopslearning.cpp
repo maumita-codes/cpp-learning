@@ -91,7 +91,11 @@ public:
 };
 
 //STANDARD TEMPLATE LIBRARY
-
+//1.VECTOR
+//2.SIZE
+//3.POP_BACK()
+//4.FRONT() AND BACK()
+//5.AT()
 
 int main(){
     Employee* ptr= new Developer("Maumita");
@@ -128,9 +132,20 @@ int main(){
     numbers.push_back(40);
 
     for(int x: numbers){
-        cout<< x << " ";
+        cout<< x << " "<<endl;
     }
+ 
+    cout<<"Size of the arr: "<<numbers.size()<<endl;
+    numbers.pop_back();
+    cout<<numbers.size()<<endl;
+    cout<<numbers.front()<<endl;
+    cout<<numbers.back()<<endl;
 
-    
+    //[]:direct access
+    //.at():checked access
+
+    cout << numbers.at(0) << endl;
+    cout << numbers.at(1) << endl;
+    cout << numbers.at(2) << endl;
     return 0;
 }
