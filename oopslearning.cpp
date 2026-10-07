@@ -96,6 +96,8 @@ public:
 //3.POP_BACK()
 //4.FRONT() AND BACK()
 //5.AT()
+//6.INSERT()
+//7.ERASE()
 
 int main(){
     Employee* ptr= new Developer("Maumita");
@@ -147,5 +149,8 @@ int main(){
     cout << numbers.at(0) << endl;
     cout << numbers.at(1) << endl;
     cout << numbers.at(2) << endl;
+
+    numbers.insert(numbers.begin() + 2, 50);
+    numbers.erase(numbers.begin()+2);
     return 0;
 }
