@@ -98,6 +98,8 @@ public:
 //5.AT()
 //6.INSERT()
 //7.ERASE()
+//8.CLEAR()
+//9.EMPTY()
 
 int main(){
     Employee* ptr= new Developer("Maumita");
@@ -152,5 +154,14 @@ int main(){
 
     numbers.insert(numbers.begin() + 2, 50);
     numbers.erase(numbers.begin()+2);
+
+    vector<int> num = {10, 20, 30, 40, 50};
+    num.clear();
+    cout<<num.size()<<endl;
+    cout<<num.empty()<<endl;
+    if(num.empty()){
+        cout<<"Vector is empty."<<endl;
+    }
+
     return 0;
 }
