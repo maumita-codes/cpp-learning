@@ -2,6 +2,7 @@
 #include <utility>
 #include <vector>
 #include <set>
+#include <map>
 
 using namespace std;
 class Employee{
@@ -103,7 +104,7 @@ public:
 //9.EMPTY()
 //10.<SET>
 
-int main(){
+ int main(){
     Employee* ptr= new Developer("Maumita");
     ptr->work();
     delete ptr;
@@ -182,7 +183,7 @@ int main(){
         cout<<"100 doesnt exists."<<endl;
     }
     
-    //example2:
+//     //example2:
     set<int> nos={10,20,30,40,40,50};
     nos.insert(25);
     nos.erase(10);
@@ -196,6 +197,24 @@ int main(){
     }
     else{
         cout<<"30 doesnt exists."<<endl;
+    }
+
+    map<int, string> students;
+    students[101]="Maumita";
+    students[102]="Rahul";
+    students[103]="Ankit";
+    students[104]="Avantika";
+    cout<<students[104]<<endl;
+    cout<<students[101]<<endl;
+
+    for(auto d: students){
+        cout<<d.first<<" "<<d.second<<endl;
+    }
+    if(students.find(105)!=students.end()){
+        cout<<"Student found"<<endl;
+    }
+    else{
+        cout<<"Student not found"<<endl;
     }
     return 0;
 }
