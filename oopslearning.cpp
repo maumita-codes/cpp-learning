@@ -1,6 +1,7 @@
 #include <iostream>
 #include <utility>
 #include <vector>
+#include <set>
 
 using namespace std;
 class Employee{
@@ -100,6 +101,7 @@ public:
 //7.ERASE()
 //8.CLEAR()
 //9.EMPTY()
+//10.<SET>
 
 int main(){
     Employee* ptr= new Developer("Maumita");
@@ -163,5 +165,37 @@ int main(){
         cout<<"Vector is empty."<<endl;
     }
 
+    //SET : insert(),erase(),find()
+    //exmaple1:
+    set<int>  nums={40,10,30,20,40};
+    nums.insert(50);
+    nums.insert(20);
+    nums.erase(40);
+    for (int v: nums){
+        cout<<v<<" ";
+    }
+    cout<<""<<endl;
+    if(nums.find(100)!= nums.end()){
+        cout<<"100 exists."<<endl;
+    }
+    else{
+        cout<<"100 doesnt exists."<<endl;
+    }
+    
+    //example2:
+    set<int> nos={10,20,30,40,40,50};
+    nos.insert(25);
+    nos.erase(10);
+    for (int i: nos){
+        cout<<i<<" ";
+    }
+    cout<<""<<endl;
+
+    if (nos.find(30)!= nos.end()){
+        cout<<"30 exists."<<endl;
+    }
+    else{
+        cout<<"30 doesnt exists."<<endl;
+    }
     return 0;
 }
