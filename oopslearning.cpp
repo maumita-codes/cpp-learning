@@ -3,6 +3,8 @@
 #include <vector>
 #include <set>
 #include <map>
+#include <algorithm>
+#include <functional>
 
 using namespace std;
 class Employee{
@@ -105,66 +107,7 @@ public:
 //10.<SET>
 
  int main(){
-    Employee* ptr= new Developer("Maumita");
-    ptr->work();
-    delete ptr;
-  
-    Box b1(10);
-    Box b2(20);
-    b2=b1;
-    cout << *b1.value << endl;
-    cout << *b2.value <<endl;
-    Box b3=std::move(b1);
-    cout<<*b3.value<<endl;
-    Box b4(50);
-    cout<< *b4.value <<endl;
-    b4= std::move(b3);
-    cout<< *b4.value <<endl;
 
-    cout<< multiply(10,20) <<endl;
-    cout<< multiply(2.5,6.7)<<endl;
-
-    cout<<add(10,4.5)<<endl;
-    cout << add(5, 2.75) << endl;
-
-    Storage<int>s1(25);
-    Storage<string>s2("Hello");
-    s1.show();
-    s2.show();
-
-    vector<int> numbers;
-    numbers.push_back(10);
-    numbers.push_back(20);
-    numbers.push_back(30);
-    numbers.push_back(40);
-
-    for(int x: numbers){
-        cout<< x << " "<<endl;
-    }
- 
-    cout<<"Size of the arr: "<<numbers.size()<<endl;
-    numbers.pop_back();
-    cout<<numbers.size()<<endl;
-    cout<<numbers.front()<<endl;
-    cout<<numbers.back()<<endl;
-
-    //[]:direct access
-    //.at():checked access
-
-    cout << numbers.at(0) << endl;
-    cout << numbers.at(1) << endl;
-    cout << numbers.at(2) << endl;
-
-    numbers.insert(numbers.begin() + 2, 50);
-    numbers.erase(numbers.begin()+2);
-
-    vector<int> num = {10, 20, 30, 40, 50};
-    num.clear();
-    cout<<num.size()<<endl;
-    cout<<num.empty()<<endl;
-    if(num.empty()){
-        cout<<"Vector is empty."<<endl;
-    }
 
     //SET : insert(),erase(),find()
     //exmaple1:
@@ -180,10 +123,10 @@ public:
         cout<<"100 exists."<<endl;
     }
     else{
-        cout<<"100 doesnt exists."<<endl;
-    }
+//         cout<<"100 doesnt exists."<<endl;
+//     }
     
-//     //example2:
+//example2:
     set<int> nos={10,20,30,40,40,50};
     nos.insert(25);
     nos.erase(10);
@@ -199,22 +142,46 @@ public:
         cout<<"30 doesnt exists."<<endl;
     }
 
+// //maps
+// //1.
     map<int, string> students;
     students[101]="Maumita";
     students[102]="Rahul";
     students[103]="Ankit";
     students[104]="Avantika";
+    students[105]="Anushka";
+    cout<<students[103]<<endl;
     cout<<students[104]<<endl;
     cout<<students[101]<<endl;
 
     for(auto d: students){
         cout<<d.first<<" "<<d.second<<endl;
     }
+
     if(students.find(105)!=students.end()){
         cout<<"Student found"<<endl;
     }
     else{
         cout<<"Student not found"<<endl;
     }
+// STL iterators
+// begin(),end()
+    vector<int> numberss={12,24,36,48};
+    for(auto it= numberss.begin(); it!=numberss.end(); it++){
+        if (*it>20){
+            cout<<*it<<" ";
+        }
+        
+    }
+
+//sort()
+    vector <int> marks={35,90,15,70,50};
+    sort(marks.begin(), marks.end());
+    for(auto it = marks.begin(); it != marks.end(); it++){
+    if(*it>40){
+        cout<<*it<<" ";
+    }
+}
+    
     return 0;
 }
