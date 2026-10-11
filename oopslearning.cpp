@@ -123,8 +123,8 @@ public:
         cout<<"100 exists."<<endl;
     }
     else{
-//         cout<<"100 doesnt exists."<<endl;
-//     }
+        cout<<"100 doesnt exists."<<endl;
+    }
     
 //example2:
     set<int> nos={10,20,30,40,40,50};
@@ -181,7 +181,19 @@ public:
     if(*it>40){
         cout<<*it<<" ";
     }
-}
+    }
+    cout<<""<<endl;
+
+    vector<int> number1={5,15,25,35};
+    auto it = find(number1.begin(),number1.end(),20);
+    if(it!= number1.end()){
+        cout<<"found: "<< *it<<endl;
+    }
+    else{
+        cout<<"not found "<<endl;
+    }
+
+
     
     return 0;
 }
