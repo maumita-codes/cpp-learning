@@ -5,6 +5,7 @@
 #include <map>
 #include <algorithm>
 #include <functional>
+#include <numeric>
 
 using namespace std;
 class Employee{
@@ -193,7 +194,27 @@ public:
         cout<<"not found "<<endl;
     }
 
+//count()
+   vector<int> mar={50,70,50,90,50,70};
+   int result= count(mar.begin(),mar.end(),70);
+   cout<<result<<endl;     
 
-    
+//min_element(),max_element()
+    vector<int> mark={45,80,25,95,60};
+    cout<< *max_element(mark.begin(),mark.end())<<endl;
+    cout<< *min_element(mark.begin(),mark.end())<<endl;
+
+    vector<int> values={5,15,25,35};
+    int total= accumulate(values.begin(),values.end(),10);
+    cout<<total<<endl;
+
+//all_of(), any_of(),none_of()
+    vector<int> num={10,20,30,40};
+    cout<<all_of(num.begin(),num.end(), [](int x) {return x>0;})<<endl;
+
+    cout<<any_of(num.begin(),num.end(), [](int x){return x>30;})<<endl;
+
+    cout<<none_of(num.begin(),num.end(), [](int x) {return x>50;})<<endl;
+
     return 0;
 }
