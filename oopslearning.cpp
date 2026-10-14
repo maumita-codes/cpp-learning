@@ -216,5 +216,27 @@ public:
 
     cout<<none_of(num.begin(),num.end(), [](int x) {return x>50;})<<endl;
 
+//lambdas
+    auto isEven=[](int x){
+        return x%2==0;
+    };
+    cout<<isEven(12)<<endl; //1
+    cout<<isEven(07)<<endl; //0
+    cout<<isEven(20)<<endl; //1
+
+    auto isPositive=[](int y){
+        return y>0;
+    };
+    cout<<isPositive(1)<<endl;
+    cout<<isPositive(-3)<<endl;
+    cout<<isPositive(5)<<endl;
+
+    auto isGreaterthan10=[](int z){
+        return z>10;
+    };
+    cout<<isGreaterthan10(3)<<endl;
+    cout<<isGreaterthan10(18)<<endl;
+    cout<<isGreaterthan10(8)<<endl;
+
     return 0;
 }
