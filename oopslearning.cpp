@@ -238,5 +238,21 @@ public:
     cout<<isGreaterthan10(18)<<endl;
     cout<<isGreaterthan10(8)<<endl;
 
+//count_if()
+//1.
+    vector<int> n={3,10,15,20,25,30};
+    int results=count_if(n.begin(), n.end(),[](int r){
+        return r%2==0;
+    }
+    );
+    cout<<results<<endl;
+//2.
+    vector<int> nu={12,25,8,40,17,30};
+    auto isGreaterthan20=[](int d){
+        return d>20;
+    };
+    int res=count_if(nu.begin(),nu.end(),isGreaterthan20);
+    cout<<res<<endl;
+
     return 0;
 }
