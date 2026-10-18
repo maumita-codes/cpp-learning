@@ -254,5 +254,21 @@ public:
     int res=count_if(nu.begin(),nu.end(),isGreaterthan20);
     cout<<res<<endl;
 
+//3. for_each()
+//eg1
+    vector<int> ne={3,5,7};
+    for_each(ne.begin(),ne.end(),[](int a){
+        cout<<a+10<<" ";
+    });
+    cout<<""<<endl;
+//eg2
+    vector<int> nee={2,4,6};
+    for_each(nee.begin(),nee.end(),[](int f){
+        f=f*2;
+    });
+    for(int f: nee){
+        cout<< f <<" ";
+    }
+
     return 0;
 }
