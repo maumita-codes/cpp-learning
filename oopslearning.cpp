@@ -280,5 +280,15 @@ using namespace std;
     for(int x: doubled){
         cout<< x <<" ";
     }
+
+//capture by reference in lambdas
+    int bonus= 5;
+    auto addbonus = [&bonus](int y){
+        bonus++;
+        return y+ bonus;
+    };
+    cout<< addbonus(10)<<" ";
+    cout<< addbonus(10)<<" ";
+    cout<< bonus;
     return 0;
 }
