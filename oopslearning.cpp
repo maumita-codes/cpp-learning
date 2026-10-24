@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <functional>
 #include <numeric>
+#include <string>
 
 using namespace std;
 class Employee{
@@ -269,6 +270,7 @@ public:
     for(int f: nee){
         cout<< f <<" ";
     }
+    cout<<endl;
 
 //4. transform()
     vector <int> list={2,4,6};
@@ -280,6 +282,7 @@ public:
     for(int x: doubled){
         cout<< x <<" ";
     }
+    cout<<endl;
 
 //capture by reference in lambdas
     int bonus= 5;
@@ -290,17 +293,30 @@ public:
     cout<< addbonus(10)<<" ";
     cout<< addbonus(10)<<" ";
     cout<< bonus;
+    cout<<endl;
 
-//using mutable
+//using transform + lambdas {mutable}
     int bonuses=3;
-    vector<int> nums={2,4,6};
-    vector<int> output(nums.size());
+    vector<int> non={2,4,6};
+    vector<int> output(non.size());
 
-    transform(nums.begin(),nums.end(),output.begin(),[bonuses](int n){
+    transform(non.begin(),non.end(),output.begin(),[bonuses](int n){
         return n*2 + bonuses;
     }
     );
     cout<< output[0]<< " "<< output[1]<< " "<< output[2]<< " "<<bonuses;
+    cout<<endl;
 
+//combining lambdas with count_if()
+    vector <int> number10={3,8,12,5,16,7};
+    int limit=10;
+    int outcome =count_if(
+        number10.begin(),
+        number10.end(),
+        [limit](int t){
+            return t> limit;
+        }
+    );
+    cout<<outcome<<endl;
     return 0;
 }
