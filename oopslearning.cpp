@@ -318,5 +318,16 @@ public:
         }
     );
     cout<<outcome<<endl;
+
+//1. count odd numbers using lambdas
+    vector <int> nums3={4,15,8,22,11,6,19};
+    int odd= count_if(
+        nums3.begin(),
+        nums3.end(),
+        [odd](int w){
+            return w%2 !=0;
+        }
+    );
+    cout<<odd<<endl; 
     return 0;
 }
