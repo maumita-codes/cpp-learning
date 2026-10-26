@@ -329,5 +329,28 @@ public:
         }
     );
     cout<<odd<<endl; 
+
+//2. filter the numbers and transform them into new vector
+    vector <int> numerics={2,5,8,11,14};
+    vector <int> filtered;
+    copy_if(
+        numerics.begin(), numerics.end(),
+        back_inserter(filtered),
+        [](int n){
+            return n>7;
+        }
+    );
+    vector <int> re(filtered.size());
+    transform(
+        filtered.begin(),filtered.end(),
+        re.begin(),
+        [](int n){
+            return n*2;
+        }
+    );
+    for(int h: re){
+        cout<< h <<" ";
+    }
+    cout<<endl;
     return 0;
 }
