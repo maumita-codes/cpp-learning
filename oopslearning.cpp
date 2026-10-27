@@ -371,6 +371,33 @@ public:
     }
     cout<<endl;
 
+//e.g.3
+    vector<int> numericals = {2, 5, 8, 11, 14};
+    vector<int> filter;
 
+    copy_if(numerical.begin(), numerical.end(),
+        back_inserter(filter),
+        [](int o) {
+        return o % 2 == 0;
+    });
+
+    vector<int> req(filter.size());
+
+    transform(filter.begin(), filter.end(),
+        req.begin(),
+        [](int o) {
+        return o / 2;
+    });
+
+    int count = count_if(
+        req.begin(), req.end(),
+        [](int o) {
+        return o > 3;
+    });
+
+    for (int o : req)
+    cout << o << " ";
+
+    cout << "\nCount: " << count;
     return 0;
 }
