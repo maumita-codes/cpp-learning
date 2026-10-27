@@ -331,6 +331,7 @@ public:
     cout<<odd<<endl; 
 
 //2. filter the numbers and transform them into new vector
+//e.g.1
     vector <int> numerics={2,5,8,11,14};
     vector <int> filtered;
     copy_if(
@@ -352,5 +353,24 @@ public:
         cout<< h <<" ";
     }
     cout<<endl;
+
+//e.g.2
+    vector <int> numerical={3,4,7,10};
+    vector <int> filtering;
+    copy_if(numerical.begin(),numerical.end(),
+    back_inserter(filtering),[](int q){
+        return q>5;
+    }
+    );
+    vector <int> rew(filtering.size());
+    transform(filtering.begin(), filtering.end(), rew.begin(),[](int q){
+        return q+2;
+    });
+    for(int e: rew){
+        cout<<e<< " ";
+    }
+    cout<<endl;
+
+
     return 0;
 }
