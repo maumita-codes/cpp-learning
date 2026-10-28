@@ -7,6 +7,7 @@
 #include <functional>
 #include <numeric>
 #include <string>
+#include <iterator>
 
 using namespace std;
 class Employee{
@@ -399,5 +400,34 @@ public:
     cout << o << " ";
 
     cout << "\nCount: " << count;
+    cout<<endl;
+//e.g.4
+    vector<int> numericalsis = {3, 6, 9, 12, 15};
+    vector<int> repeat;
+
+    copy_if(numericalsis.begin(), numericalsis.end(),
+    back_inserter(repeat),
+    [](int z) {
+        return z >= 9;
+    });
+
+    transform(repeat.begin(), repeat.end(),
+        repeat.begin(),
+        [](int z) {
+            return z / 3;
+    });
+
+    repeat.erase(
+        remove_if(repeat.begin(), repeat.end(),
+        [](int z) {
+            return z % 2 == 0;
+        }),
+        repeat.end()
+    );
+
+    for (int z : repeat){
+        cout << z << " ";
+    }
+    cout<<endl;
     return 0;
 }
