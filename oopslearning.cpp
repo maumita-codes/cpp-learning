@@ -429,5 +429,35 @@ public:
         cout << z << " ";
     }
     cout<<endl;
+
+//e.g.5
+    vector<int> alpha = {4, 7, 10, 13, 16};
+
+    vector<int> aresult;
+
+    copy_if(alpha.begin(), alpha.end(),
+        back_inserter(aresult),
+        [](int j) {
+            return j > 7;
+        });
+
+    transform(alpha.begin(), alpha.end(),
+          alpha.begin(),
+          [](int j) {
+              return j * 2;
+          });
+
+    int cot = count_if(
+    alpha.begin(), alpha.end(),
+    [](int j) {
+        return j > 25;
+    }
+    );
+
+    for (int j : alpha) {
+    cout << j << " ";
+    }
+    cout << "\nCount: " << cot;
+
     return 0;
 }
