@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    //1. sum of factorials from one to n
+    // //1. sum of factorials from one to n
     // int n;
     // long long fact=1;
     // long long sum=0;
@@ -13,19 +13,31 @@ int main(){
     // }
     // cout<<"sum of factorials: "<<sum <<endl;
 
-    //2. sum of even factorials 
-    int a;
-    long long fac=1;
-    long long summ=0;
-    cout<<"Enter a non negative even number: "<<endl;
-    cin>>a;
-    for(int j=1; j<=a; j++){
-        fac= fac*j;
-        if(j%2==0){
-            summ=summ+fac;
-        }
+    // //2. sum of even factorials 
+    // int a;
+    // long long fac=1;
+    // long long summ=0;
+    // cout<<"Enter a non negative even number: "<<endl;
+    // cin>>a;
+    // for(int j=1; j<=a; j++){
+    //     fac= fac*j;
+    //     if(j%2==0){
+    //         summ=summ+fac;
+    //     }
+    // }
+    // cout<<"sum of even factorials."<< summ<<endl;
+
+    //3.sum of squares 
+    int f;
+    int squ=1;
+    long long summation=0;
+    cout<<"Enter a non negative number: "<<endl;
+    cin>>f;
+    for(int s=1; s<=f; s++){
+        squ= s*s;
+        summation= summation+squ;
     }
-    cout<<"sum of even factorials."<< summ<<endl;
+    cout<<"sum of squares of numbers is: "<<summation<<endl;
 
     return 0;
 }
