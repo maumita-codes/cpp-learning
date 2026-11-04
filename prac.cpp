@@ -78,5 +78,27 @@ int main(){
         cout<<"Not a palindrome."<<endl;
     }
 
+    //6. counting how many digits are there in a number
+    long long e;
+    int count=0;
+    cout<<"Enter a number: "<<endl;
+    cin>>e;
+    if(e==0){
+        count=1;
+    }
+    else{
+        for(;e>0;e=e/10){
+            count++;
+        }
+    }
+    /* the while loop will go like this:
+        while(e>0){
+        count+=1;
+        e=e/10;
+        }
+    */
+    cout<<"the number of digits in this number are: "<<count<<endl;
+
+
     return 0;
 }
