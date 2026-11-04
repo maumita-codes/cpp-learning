@@ -109,5 +109,22 @@ int main(){
     }
     cout<<"the sum of the digits is: "<< add<<endl;
 
+    //8. product of digits
+    int p;
+    int multiply=1;
+    cout<<"Enter the number: "<<endl;
+    cin>>p;
+    int q;
+    if(p==0){
+        multiply= 0;
+    }
+    else{
+        for(; p>0; p=p/10){
+            q= p%10;
+            multiply= multiply*q;
+        } 
+    }
+    cout<<"The multiplication of the numbers is: "<<multiply<<endl;
+    
     return 0;
 }
