@@ -99,6 +99,15 @@ int main(){
     */
     cout<<"the number of digits in this number are: "<<count<<endl;
 
+    //7. sum of the digits of a number
+    int d;
+    int add=0;
+    cout<<"enter a number: "<<endl;
+    cin>>d;
+    for (; d>0; d=d/10){
+        add+=d%10;
+    }
+    cout<<"the sum of the digits is: "<< add<<endl;
 
     return 0;
 }
