@@ -126,5 +126,30 @@ int main(){
     }
     cout<<"The multiplication of the numbers is: "<<multiply<<endl;
     
+    //9. combining the above three in one loop
+    int c;
+    int ct=0; 
+    int addn=0;
+    int mul=1;
+    int h;
+    cout<<"Enter the number: "<<endl;
+    cin>>c;
+    if(c==0){
+        mul=0;
+        sum=0;
+        ct=1;
+    }
+    else{
+        for(;c>0;c=c/10){
+            h=c%10;
+            ct=ct+1;
+            addn=addn+h;
+            mul=mul*h;
+        }
+    }
+    cout<<"The number of digits are: "<<ct<<endl;
+    cout<<"The sum of the digits is: "<<addn<<endl;
+    cout<<"The product of the numbers is: "<<mul<<endl;
+
     return 0;
 }
