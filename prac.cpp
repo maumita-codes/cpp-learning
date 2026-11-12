@@ -151,5 +151,31 @@ int main(){
     cout<<"The sum of the digits is: "<<addn<<endl;
     cout<<"The product of the numbers is: "<<mul<<endl;
 
+    //10. product of even digits 
+    int u;
+    int mult=1;
+    cout<<"Enter the number: "<<endl;
+    cin>>u;
+    int x;
+    bool found=false;
+    if(u==0){
+        mult= 0;
+    }
+    else{
+        for(; u>0; u=u/10){
+            x= u%10;
+            if(x%2==0){
+                mult=mult*x;
+                found=true;
+            }
+        } 
+        if(found){
+            cout<<"The multiplication of the even digits is: "<<mult<<endl;
+        }
+        else{
+            cout<<"no even digits"<<endl;
+        }
+    }
+
     return 0;
 }
