@@ -176,6 +176,29 @@ int main(){
             cout<<"no even digits"<<endl;
         }
     }
-
+ 
+    //11. counting even and odd digits
+    int k;
+    int coun=0;
+    int cnt=0;
+    int b;
+    cout<<"Enter a number: "<<endl;
+    cin>>k;
+    if(k==0){
+        coun=1;
+    }
+    else{
+        for(; k>0; k=k/10){
+            b= k%10;
+            if(b%2==0){
+                coun=coun+1;
+            }
+            else if(b%2==1){
+                cnt=cnt+1;
+            }
+        }
+    }
+    cout<<"Number of even digits in the number: "<<coun<<endl;
+    cout<<"Number of odd digits in a number: "<<cnt<<endl;
     return 0;
 }
