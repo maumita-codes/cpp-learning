@@ -200,5 +200,36 @@ int main(){
     }
     cout<<"Number of even digits in the number: "<<coun<<endl;
     cout<<"Number of odd digits in a number: "<<cnt<<endl;
+
+    //12. difference between sum of even and ood digits of a number
+    int s;
+    int sct=0;
+    int oct=0;
+    int diff;
+    cout<<"enter a number: "<<endl;
+    cin>>s;
+    int z;
+    if(s==0){
+        sct=0;
+    }
+    else{
+        for (; s>0; s=s/10){
+            z=s%10;
+            if(z%2==0){
+                sct=sct+z;
+            }
+            else{
+                oct=oct+z;
+            }
+        }
+    }
+    if(sct>oct){
+        diff=sct-oct;
+    }
+    else{
+        diff=oct-sct;
+    }
+    cout<<"the difference between the sum of even and odd digits is: "<< diff <<endl;
+
     return 0;
 }
