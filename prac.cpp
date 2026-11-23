@@ -231,5 +231,46 @@ int main(){
     }
     cout<<"the difference between the sum of even and odd digits is: "<< diff <<endl;
 
+    //13.count digits divisible by 3, 5 or both
+    //divisible by 3
+    int y;
+    cout<<"Enter a number: "<<endl;
+    cin>>y;
+    int v;
+    int d3=0;
+    int d5=0;
+    int db=0;
+    if(y==0){
+        db=1;
+        d3=1;
+        d5=1;
+    }
+    else{
+        for(; y>0; y=y/10){
+            v= y%10;
+            if(v==0){
+                d3=d3+1;
+                d5=d5+1;
+                db=db+1;
+            }
+            else{
+                if(v%3==0 && v%5==0){
+                    db=db+1;
+                    d3=d3+1;
+                    d5=d5+1;
+                }
+                else if(v%5==0){
+                    d5=d5+1;
+                }
+                else if(v%3==0){
+                    d3=d3+1;
+                }
+            }
+        }
+    }
+    cout<<"no.of digits divisible by 3: "<<d3<<endl;
+    cout<<"no.of digits divisible by 5: "<<d5<<endl;
+    cout<<"No.of digits divisible by both: "<<db<<endl;
+
     return 0;
 }
