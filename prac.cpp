@@ -272,5 +272,32 @@ int main(){
     cout<<"no.of digits divisible by 5: "<<d5<<endl;
     cout<<"No.of digits divisible by both: "<<db<<endl;
 
+    //14. find the largest and smallest digit in a number
+    int number;
+    cout<<"Enter a number: "<<endl;
+    cin>>number;
+    int num=number%10;
+    int large=num;
+    int small=num;
+    
+    if(number==0){
+        large=0;
+        small=0;
+    }
+    else{
+        for(; number; number=number/10){
+            num=number%10;
+            if(num>large){
+                large=num;
+            }
+            if(num<small){
+                small=num;
+            }
+        }
+  
+    }
+    cout<<"the largest digit in the number: "<<large<<endl;
+    cout<<"The smallest digit in the number: "<<small<< endl;
+
     return 0;
 }
