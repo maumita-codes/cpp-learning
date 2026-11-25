@@ -349,5 +349,33 @@ int main(){
     cout<<"First digit: "<<first<<endl;
     cout<<"Last digit: "<<last<<endl;
 
+    //16.to find the first and last digit of a number
+    //doing arithmatic operations on the numbers
+    int R;
+    int First;
+    int Last;
+    int Sum;
+    int Product;
+
+    cout<<"Enter a number: "<<endl;
+    cin>>R;
+    Last=R%10;
+    if(R==0){
+        First=0;
+        Last=0;
+    }
+    else{
+        while(R>9){
+            R=R/10;
+        }
+        First=R;
+    }
+    Sum=First+Last;
+    Product=First*Last;
+    
+    cout<<"the sum of first and last digit of a number is: "<<Sum<<endl;
+
+    cout<<"The product of the first and last digit is: "<<Product<<endl;
+
     return 0;
 }
