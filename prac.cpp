@@ -299,5 +299,34 @@ int main(){
     cout<<"the largest digit in the number: "<<large<<endl;
     cout<<"The smallest digit in the number: "<<small<< endl;
 
+    //15. counting the frquency of a digit in a number.
+    int num1, tofind;
+    cout<<"Enter a number: "<<endl;
+    cin>>num1;
+    cout<<"Enter the number whose frequency you want to find: "<<endl;
+    cin>>tofind;
+    int w;
+    int counts=0;
+    if(num1<0){
+        num1=-num1;
+    }
+    if(num1==0){
+        if(tofind==0){
+            counts=1;
+        }
+        else{
+            counts=0;
+        }
+        w=0;
+    }
+    else{
+        for(; num1>0; num1=num1/10){
+            w=num1%10;
+            if(w==tofind){
+                counts=counts+1;
+            }
+        }
+    }
+    cout<<"The frequency of the number "<<tofind<<" is "<<counts<<endl;
     return 0;
 }
