@@ -328,5 +328,26 @@ int main(){
         }
     }
     cout<<"The frequency of the number "<<tofind<<" is "<<counts<<endl;
+
+    //16.to find the first and last digit of a number
+    int r;
+    int first;
+    int last;
+    cout<<"Enter a number: "<<endl;
+    cin>>r;
+    last=r%10;
+    if(r==0){
+        first=0;
+        last=0;
+    }
+    else{
+        while(r>9){
+            r=r/10;
+        }
+        first=r;
+    }
+    cout<<"First digit: "<<first<<endl;
+    cout<<"Last digit: "<<last<<endl;
+
     return 0;
 }
